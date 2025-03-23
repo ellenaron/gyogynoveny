@@ -1,0 +1,4 @@
+Fekete: #2b2b2b
+Fehér: #fefefe
+Beige: #f0eee6
+Hover szürke: #d2d2d2
