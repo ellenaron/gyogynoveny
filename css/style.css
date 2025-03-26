@@ -230,7 +230,7 @@ section {
     width: 100%;
 }
 
-.card, .cardleft h1 {
+.card h1, .cardleft h1 {
     color: #fefefe;
     font-size: 50px;
 }
@@ -246,10 +246,12 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .cardcover.left {
-    background-image: linear-gradient(to left, rgb(0, 0, 0), transparent)
+    background-image: linear-gradient(to left, rgb(0, 0, 0), transparent);
+    flex-direction: row-reverse;
 }
 
 .citrom {
@@ -262,4 +264,36 @@ section {
 
 .men {
     background: url(../src/img/menta2.png) no-repeat center / cover;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.arrow button {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent url(../src/svg/arrowwhite.svg) no-repeat center / 70px;
+    border: none;
+    transition: .3s ease;
+}
+
+.arrow button:hover {
+    background: #fefefe url(../src/svg/arrowdark.svg) no-repeat center / 70px;
+}
+
+.arrow.left button {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 800px) {
+    .cardcover, .cardcover.left {
+        flex-direction: column;
+    }
 }
