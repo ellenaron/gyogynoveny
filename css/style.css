@@ -1,3 +1,265 @@
 /* Ide fog jönni a főoldal css */
 
-/* Főoldal main */
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Generál beállítások */
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Winky Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #2b2b2b;
+}
+
+hr {
+    width: 100%;
+    background-color: #d2d2d2;
+    border: none;
+    height: 3px;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #fefefe;
+}
+
+/* Navbar */
+
+#navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fefefe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 44px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.nav-items {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-items a {
+    background-color: transparent;
+    color: #2b2b2b;
+    font-size: large;
+    padding: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.nav-items a p {
+    font-family: "Winky Sans", sans-serif;
+    margin: 10px;
+}
+
+.nav-items a span {
+    width: 44px;
+    height: 44px;
+}
+
+.otthon span {
+    background: transparent url(../src/svg/home.svg) no-repeat center / 30px;
+}
+
+.citromfu span {
+    background: transparent url(../src/svg/grass.svg) no-repeat center / 30px;
+}
+
+.fagyongy span {
+    background: transparent url(../src/svg/park.svg) no-repeat center / 30px;
+}
+
+.menta span {
+    background: transparent url(../src/svg/spa.svg) no-repeat center / 30px;
+}
+
+.nav-items a:hover {
+    background-color: #d2d2d2;
+}
+
+#open {
+    width: 44px;
+    height: 44px;
+    background: transparent url(../src/svg/menu.svg) no-repeat center / 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#open:hover {
+    background: #d2d2d2 url(../src/svg/menu.svg) no-repeat center / 30px;
+}
+
+/* Összecsukott navbar */
+
+.coll-nav-items {
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #fefefe;
+    width: 0;
+    height: 100vh;
+    z-index: 999;
+    transition: .3s ease;
+    overflow: hidden;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.coll-nav-items a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #2b2b2b;
+    border-radius: 5px;
+}
+
+.coll-nav-items a p {
+    margin: 10px;
+    font-size: large;
+}
+
+.coll-nav-items a span {
+    width: 44px;
+    height: 44px;
+}
+
+.otthon-collapsed span {
+    background: transparent url(../src/svg/home.svg) no-repeat center / 30px;
+}
+
+.citromfu-collapsed span {
+    background: transparent url(../src/svg/grass.svg) no-repeat center / 30px;
+}
+
+.menta-collapsed span {
+    background: transparent url(../src/svg/spa.svg) no-repeat center / 30px;
+}
+
+.fagyongy-collapsed span {
+    background: transparent url(../src/svg/park.svg) no-repeat center / 30px;
+}
+
+.coll-nav-items a:hover {
+    background-color: #d2d2d2;
+}
+
+#close {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 5px;
+    background: transparent url(../src/svg/close.svg) no-repeat center / 30px;
+}
+
+#close:hover {
+    background: #d2d2d2 url(../src/svg/close.svg) no-repeat center / 30px;
+}
+
+#collapsed.active {
+    width: 200px;
+}
+
+@media (min-width: 801px) {
+    .nav-items button {
+        display: none;
+    }
+
+    #collapsed {
+        max-width: 0px;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav-items a {
+        display: none;
+    }
+}
+
+/* Main */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card, .cardleft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.card, .cardleft h1 {
+    color: #fefefe;
+    font-size: 50px;
+}
+
+.cardleft {
+    flex-direction: row-reverse;
+}
+
+.cardcover {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cardcover.left {
+    background-image: linear-gradient(to left, rgb(0, 0, 0), transparent)
+}
+
+.citrom {
+    background: url(../src/img/citromfu1.png) no-repeat center / cover;
+}
+
+.fa {
+    background: url(../src/img/fagyongy1.png) no-repeat center / cover;
+}
+
+.men {
+    background: url(../src/img/menta2.png) no-repeat center / cover;
+}
