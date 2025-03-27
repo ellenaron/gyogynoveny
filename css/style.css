@@ -304,3 +304,7 @@ footer{
     color: #fefefe;
     padding: 20px;
 }
+
+#list{
+    list-style-type: none;
+}
