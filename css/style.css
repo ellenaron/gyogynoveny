@@ -297,3 +297,10 @@ section {
         flex-direction: column;
     }
 }
+
+footer{
+    background-color: #2b2b2b;
+    text-align: center;
+    color: #fefefe;
+    padding: 20px;
+}
