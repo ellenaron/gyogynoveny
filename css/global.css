@@ -216,6 +216,7 @@ main {
     margin: 150px auto;
     width: 70%;
     padding: 20px;
+    box-sizing: content-box;
 }
 
 .text-box{
@@ -237,6 +238,12 @@ img {
     border: 3px #fff;
     border-radius: 10px;
     margin-right: 15px;
+}
+
+@media (max-width:500px) {
+    img {
+        width: 100%;
+    }
 }
 
 /* Footer */
