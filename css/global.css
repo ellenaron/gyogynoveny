@@ -232,7 +232,7 @@ main {
     
 }
 
-img {
+.wrappedimage {
     max-width: 320px;
     float: left;
     border: 3px #fff;
@@ -241,7 +241,7 @@ img {
 }
 
 @media (max-width:500px) {
-    img {
+    .wrappedimage {
         width: 100%;
     }
 }
